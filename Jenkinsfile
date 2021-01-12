@@ -5,7 +5,7 @@ pipeline {
     stage('Create project') {
       steps {
         deleteDir() // clean up workspace
-        checkout([$class: 'GitSCM', branches: [[name: '*/master']],
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']],
           doGenerateSubmoduleConfigurations: false,
           extensions: [[$class: 'SubmoduleOption',
             disableSubmodules: false,
