@@ -16,7 +16,7 @@ pipeline {
           submoduleCfg: [],
           userRemoteConfigs: [[
             url: 'https://github.com/xilink-vivado/myLab']]])
-      sh 'cd vivado && vivado -mode batch -source create_vivado_proj.tcl'
+      sh 'cd vivado && vivado -mode batch -source first_zynq_system_bd.tcl'
       }
     }
     stage('Run simulation') {
